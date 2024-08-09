@@ -2,7 +2,8 @@
 // OpenPoiMap Javascript library
 //*****************************************************************
 
-// Version 1.29a
+// Version 1.29e
+// 9-8-2024 Removed Potlach 2 support
 
 // This library contains 4 separate blocks of code that were previously (up to version 1.05) included as standalone js-files.
 //<!-- (mz) Laatste versie: 03-05-2018, 12:16 -->
@@ -73,7 +74,6 @@ function popupLinks(lonlat, feature, show) {
 	var fid = feature.fid.split("."); // type en ID van object
 	thelink = thelink + "<b>Edit area with:</b><br><a href=\"http://localhost:8111/load_and_zoom?top=" + ctop + "&bottom=" + cbottom + "&left=" + cleft + "&right=" + cright + "&select=" + fid[0] + fid[1] + "\" target=\"josm_frame\">JOSM</a>&nbsp;&diams;&nbsp;";
 	thelink = thelink + "<a href=\"https://www.openstreetmap.org/edit?editor=id&lat=" + lonlat.lat + "&lon=" + lonlat.lon + _ZOOM_ + "\" target=\"_blank\">ID editor</a>&nbsp;&diams;&nbsp;";
-	thelink = thelink + "<a href=\"https://www.openstreetmap.org/edit?editor=potlatch2&lat=" + lonlat.lat + "&lon=" + lonlat.lon + _ZOOM_ + "\" target=\"_blank\">Potlatch&nbsp;2</a>";
 	thelink = thelink + "</div>"; // id = tlPop
 	return thelink;
 }
