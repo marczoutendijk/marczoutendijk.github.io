@@ -1,5 +1,6 @@
 # openpoimap
 
+As of 9 august 2024 this is the **active repository** for openpoimap.
 This is the code for version 1.29 of OpenPoiMap - aka **Taglocator**.
 It is a tool to show on the OSM map a number of predefined POI's from a number of the standard OSM tagging scheme as defined
 in the wiki at: http://wiki.openstreetmap.org/wiki/Map_Features.<br>
