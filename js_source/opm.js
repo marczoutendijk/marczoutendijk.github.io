@@ -1828,16 +1828,7 @@ function openOSMI()
 
 function openP2()
 {
-	if (map.getZoom() >= 13)
-	{
-        	var centerLonLat = map.getCenter().transform(map.getProjectionObject(),new OpenLayers.Projection("EPSG:4326"));
-
-        	window.open("https://www.openstreetmap.org/edit?editor=potlatch2&lat=" + centerLonLat.lat + "&lon=" + centerLonLat.lon + "&zoom="+map.getZoom());
-	}
-	else
-	{
-		alert("Zoom in to at least level 13 before editing!");
-	}
+	alert("Potlatch is not supported");
 }
 
 function openiD()
