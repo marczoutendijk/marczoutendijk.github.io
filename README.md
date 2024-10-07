@@ -23,3 +23,5 @@ Update 1.29c: using https://tile.openstreetmap.org (thanks to Daniel de Groot)
 Update 1.29d removed width: 100% from index.html (Thanks to Piagno)
 
 Update 1.29e Removed all Potlach2 support
+
+Update 1.29f A change was need for the Dutch Monument Register. Based on mails from Kees Bos.
