@@ -2,7 +2,9 @@
 // OpenPoiMap Javascript library
 //*****************************************************************
 
-// Version 1.29e
+// Version 1.29f
+// 7-10-2024 Dutch Monumentregister changed their way of calling
+
 // 9-8-2024 Removed Potlach 2 support
 
 // This library contains 4 separate blocks of code that were previously (up to version 1.05) included as standalone js-files.
@@ -25,14 +27,8 @@ var DELIJN = "https://www.delijn.be/nl/haltes/halte/"; // De Lijn in Vlaanderen
 var MDB = "http://www.molendatabase.nl/nederland/molen.php?nummer="; // Molendatabase
 var DHM = "http://www.molens.nl/site/dbase/molen.php?mid="; // De Hollandse Molen
 
-var MONUREG = "https://monumentenregister.cultureelerfgoed.nl/monuments/";
-
-// The links below are needed if you know both the OBJnr AND the MonNr.
-// Often they are the same, but sometimes they are different
-
-// var MON1 = "http://monumentenregister.cultureelerfgoed.nl/php/main.php?cAction=show&cOffset=0&cLimit=25&cOBJnr=";
-// var MON2 = "&oOrder=ASC&cLast=1&oField=OBJ_RIJKSNUMMER&sCompMonNr=";
-// var MON3 = "&sCompMonName=&sStatus=&sProvincie=&sGemeente=&sPlaats=&sStraat=&sHuisnummer=&sPostcode=&sFunctie=&sHoofdcategorie=&sSubcategorie=&sOmschrijving=&ID=0&oField=OBJ_RIJKSNUMMER";
+// Code change based on mail from Kees Bos (5-10-2024)
+var MONUREG = "https://monumentenregister.cultureelerfgoed.nl/monumentenregister?tekst=";
 
 var WIKI = '<a target = "_blank" href="https://wiki.openstreetmap.org/wiki/Key:'; // base url to key wiki
 
@@ -355,11 +351,9 @@ FeaturePopup = OpenLayers.Class({
 		k = value.split(/[;,]/);
 		switch (key) {
 			// rce is the code used by the Dutch Monument Register
-			// The format of this link changed somewhere in 2016
 			case 'rce':
-				return this.makeLink(MONUREG + value + '?MonumentId=' + value, 'Monument register: ' + value, true);
-				//return this.makeLink(MON1 + value + MON2 + value + MON3, 'Monument register: ' + value, true);
-				// The Flemish Public Transport Operator
+				// code change based on mail from Kees Bos
+				return this.makeLink(MONUREG + value, 'Monument register: ' + value, true);	
 			case 'De_Lijn':
 				return this.makeLink(DELIJN + k[0], 'bus info: ' + k[0], true);
 			default:
