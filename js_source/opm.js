@@ -1569,7 +1569,7 @@ var fooddef = [
 	{url: "?data=(node[shop=grocery](bbox);way[shop=grocery](bbox););(._;>;);out center;", naam: "Grocery", zichtbaar: false},
 	{url: "?data=(node[shop=organic](bbox);way[shop=organic](bbox);rel[shop=organic](bbox););(._;>;);out center;", naam: "Organic", zichtbaar: false},
 	{url: "?data=(node[shop=seafood](bbox);way[shop=seafood](bbox);rel[shop=seafood](bbox););(._;>;);out center;", naam: "Seafood", zichtbaar: false},
-	{url: "?data=(node[shop=supermarket](bbox);way[shop=supermarket](bbox););(._;>;);out center;", naam: "Supermarket", zichtbaar: false},
+	{url: "?data=(node[shop~'supermarket|convenience'](bbox);way[shop~'supermarket|convenience'](bbox););(._;>;);out center;", naam: "Supermarket/Convenience Shop", zichtbaar: false},
 	{url: "?data=(node[shop=wine](bbox);way[shop=wine](bbox);rel[shop=wine](bbox););(._;>;);out center;", naam: "Wine", zichtbaar: false}
 ];
 
